@@ -1,59 +1,83 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Composition Plan</title>
-        <style>
-            body{
-                font-family:Arial,sans-serif;
-                line-height:1.5;
-                max-width:90rem;
-                margin:auto;
-                padding:1rem;
-                color:#191919;
-                }
-            table{
-                width:100%;
-                border-collapse:collapse;
-                }
-            th,td{
-                padding:.6rem;
-                border:1px solid #999;
-                text-align:left;
-                vertical-align:top;
-                }
-            th{
-                background:#f1f1f1;
-                }
-        </style>
-        </head>
-        <body>
-            <h1>L6 · Composition Plan</h1>
-            <p>Complete one row for every positioned, layered, clipped, rounded, or shape-wrapped element. Duplicate rows as needed.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Element</th>
-                        <th>Content purpose</th>
-                        <th>Normal-flow baseline</th>
-                        <th>Chosen technique and why</th>
-                        <th>Containing block / stacking context</th>
-                        <th>Fallback or disengagement</th>
-                        <th>Required test</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>.issue-badge</td>
-                        <td>Shows the story label "Daily Ritual" in the feature header.</td>
-                        <td>If absolute positioning is removed, the label stays in normal flow inside the feature header.</td>
-                        <td>Uses absolute positioning inside the relatively positioned feature header so the label stays anchored in the top-right without pushing the title or intro out of place.</td>
-                        <td>The containing block is .feature-header because it is the nearest positioned ancestor.</td>
-                        <td>Check at smaller widths and zoom to make sure the badge does not overlap the title or intro. If it does, move it back into normal flow with a responsive rule.</td>
-                        <td>Test at 320px, 768px, 1280px, and 200% zoom to make sure the badge stays readable and does not overlap the title or intro.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </body>
-        </html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Composition Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            max-width: 90rem;
+            margin: auto;
+            padding: 1rem;
+            color: #191919;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: .6rem;
+            border: 1px solid #999;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>L6 · Composition Plan</h1>
+    <p>Complete one row for every positioned, layered, clipped, rounded, or shape-wrapped element. Duplicate rows as
+        needed.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Element</th>
+                <th>Content purpose</th>
+                <th>Normal-flow baseline</th>
+                <th>Chosen technique and why</th>
+                <th>Containing block / stacking context</th>
+                <th>Fallback or disengagement</th>
+                <th>Required test</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>.issue-badge</td>
+                <td>Shows the story label "Daily Ritual" in the feature header.</td>
+                <td>If absolute positioning is removed, the label stays in normal flow inside the feature header.</td>
+                <td>Uses absolute positioning inside the relatively positioned feature header so the label stays
+                    anchored in the top-right without pushing the title or intro out of place.</td>
+                <td>The containing block is .feature-header because it is the nearest positioned ancestor.</td>
+                <td>Check at smaller widths and zoom to make sure the badge does not overlap the title or intro. If it
+                    does, move it back into normal flow with a responsive rule.</td>
+                <td>Test at 320px, 768px, 1280px, and 200% zoom to make sure the badge stays readable and does not
+                    overlap the title or intro.</td>
+            </tr>
+            <tr>
+                <td>.story-guide</td>
+                <td>Provides quick links to the main sections of the coffee story.</td>
+                <td>Without sticky positioning, the guide stays in normal flow above the article content.</td>
+                <td>Uses sticky positioning on wider screens so the section links stay available while reading without
+                    removing the guide from normal flow.</td>
+                <td>The sticky element stays within the main grid area and is bounded by its containing block as the
+                    page scrolls.</td>
+                <td>Below the 52rem breakpoint, sticky positioning is not applied, so the guide returns to normal flow.
+                </td>
+                <td>Test scrolling at desktop width to confirm the guide sticks and stops at its section boundary. Also
+                    test 320px, 768px, 1280px, and 200% zoom.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
