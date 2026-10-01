@@ -76,6 +76,20 @@
                 <td>Test scrolling at desktop width to confirm the guide sticks and stops at its section boundary. Also
                     test 320px, 768px, 1280px, and 200% zoom.</td>
             </tr>
+            <tr>
+                <td>.pull-quote</td>
+                <td>Highlights a short quote from the coffee story so it stands out from the surrounding paragraphs.
+                </td>
+                <td>Without the enhanced desktop styling, the quote stays in normal flow between the paragraphs.</td>
+                <td>On wider screens, it uses a negative inline margin for a small controlled overlap and relative
+                    positioning with a raised layer so it stays above nearby content.</td>
+                <td>The pull quote remains in the article flow. Its relative positioning and z-index create a raised
+                    stacking context using the layer token.</td>
+                <td>Below the 52rem breakpoint, the overlap is removed and the quote stays in normal flow with its
+                    regular margins.</td>
+                <td>Test the overlap at desktop width, 320px, 768px, 1280px, and 200% zoom. Confirm it does not cover
+                    text, links, or keyboard focus.</td>
+            </tr>
         </tbody>
     </table>
 </body>
