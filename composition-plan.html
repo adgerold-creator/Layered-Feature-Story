@@ -90,6 +90,20 @@
                 <td>Test the overlap at desktop width, 320px, 768px, 1280px, and 200% zoom. Confirm it does not cover
                     text, links, or keyboard focus.</td>
             </tr>
+            <tr>
+                <td>.feature-figure</td>
+                <td>Frames the main feature image and caption as one visual group.</td>
+                <td>Without the rounded treatment, the figure still stays in normal flow with its border, padding,
+                    image, and caption.</td>
+                <td>Uses border-radius to soften the figure container and separate it visually from the surrounding
+                    article content.</td>
+                <td>The figure stays in normal flow and does not need its own stacking context for the rounded
+                    treatment.</td>
+                <td>If border-radius is unsupported or removed, the figure simply becomes rectangular and all content
+                    stays readable.</td>
+                <td>Test at 320px, 768px, 1280px, and 200% zoom to confirm the figure remains readable and does not
+                    overflow.</td>
+            </tr>
         </tbody>
     </table>
 </body>
