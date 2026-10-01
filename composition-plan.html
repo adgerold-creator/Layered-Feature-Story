@@ -45,13 +45,13 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Example only</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
+                        <td>.issue-badge</td>
+                        <td>Shows the story label "Daily Ritual" in the feature header.</td>
+                        <td>If absolute positioning is removed, the label stays in normal flow inside the feature header.</td>
+                        <td>Uses absolute positioning inside the relatively positioned feature header so the label stays anchored in the top-right without pushing the title or intro out of place.</td>
+                        <td>The containing block is .feature-header because it is the nearest positioned ancestor.</td>
+                        <td>Check at smaller widths and zoom to make sure the badge does not overlap the title or intro. If it does, move it back into normal flow with a responsive rule.</td>
+                        <td>Test at 320px, 768px, 1280px, and 200% zoom to make sure the badge stays readable and does not overlap the title or intro.</td>
                     </tr>
                 </tbody>
             </table>
