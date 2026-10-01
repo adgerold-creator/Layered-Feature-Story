@@ -104,6 +104,20 @@
                 <td>Test at 320px, 768px, 1280px, and 200% zoom to confirm the figure remains readable and does not
                     overflow.</td>
             </tr>
+            <tr>
+                <td>.feature-figure img</td>
+                <td>Adds a small visual shape treatment to the feature image without clipping the caption or other
+                    important content.</td>
+                <td>Without clip-path, the image stays rectangular inside the figure and remains fully visible.</td>
+                <td>Uses clip-path with a mild polygon so the image has a more editorial look without becoming too
+                    dramatic.</td>
+                <td>The image stays inside .feature-figure. The clip-path changes only the visible shape of the image
+                    and does not create a new layout relationship with the text.</td>
+                <td>If clip-path is unsupported or turned off, the image returns to a normal rectangle and the figure
+                    still works.</td>
+                <td>Disable clip-path and confirm the rectangular fallback. Also test 320px, 768px, 1280px, and 200%
+                    zoom to make sure no important image content is cut off.</td>
+            </tr>
         </tbody>
     </table>
 </body>
