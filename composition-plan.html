@@ -118,6 +118,20 @@
                 <td>Disable clip-path and confirm the rectangular fallback. Also test 320px, 768px, 1280px, and 200%
                     zoom to make sure no important image content is cut off.</td>
             </tr>
+            <tr>
+                <td>.shape-portrait</td>
+                <td>Supports the editorial section with a visual image that the text can wrap around.</td>
+                <td>Without the shape treatment, the image stays in normal flow and the text remains readable below or
+                    beside it.</td>
+                <td>Uses a floated image with shape-outside and shape-margin so the paragraph wraps around a circular
+                    shape instead of a rectangular box.</td>
+                <td>The portrait stays inside its article section. The float affects text wrapping within that section,
+                    while the section's flow-root keeps the floated content contained.</td>
+                <td>If shape-outside is unsupported or disabled, the image can still remain floated and the text wraps
+                    around its rectangular box.</td>
+                <td>Disable shape-outside and confirm the rectangular fallback. Also test 320px, 768px, 1280px, and 200%
+                    zoom to make sure the text stays readable and the image does not crowd the content.</td>
+            </tr>
         </tbody>
     </table>
 </body>
