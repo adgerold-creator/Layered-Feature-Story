@@ -138,7 +138,7 @@ img {
     .pull-quote {
         position: relative;
         z-index: var(--layer-raised);
-        margin-inline-start: -4rem;
+        margin-inline-start: -1rem;
         background: var(--color-surface);
         ;
     }
