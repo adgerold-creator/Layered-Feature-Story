@@ -115,7 +115,8 @@ img {
 }
 
 .documentation {
-    grid-column: 1/-1;
+    max-width: 72rem;
+    margin: auto;
     padding: 1rem;
     background: #f1f1f1;
 }
@@ -140,7 +141,6 @@ img {
         z-index: var(--layer-raised);
         margin-inline-start: -1rem;
         background: var(--color-surface);
-        ;
     }
 
     @supports (shape-outside:circle(50%)) {
